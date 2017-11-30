@@ -230,6 +230,7 @@
     if ( $("#cbType28").is(':checked')) searchType += "28,";
     if ( $("#cbType29").is(':checked')) searchType += "29,";
     if ( $("#cbType30").is(':checked')) searchType += "30,";
+    if ( $("#cbType31").is(':checked')) searchType += "31,";
     self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
     // TEXTUAL OPTION to filter checkboxes by text type
