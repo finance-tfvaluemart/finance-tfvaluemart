@@ -231,6 +231,27 @@
     if ( $("#cbType29").is(':checked')) searchType += "29,";
     if ( $("#cbType30").is(':checked')) searchType += "30,";
     if ( $("#cbType31").is(':checked')) searchType += "31,";
+    if ( $("#cbType32").is(':checked')) searchType += "32,";
+    if ( $("#cbType33").is(':checked')) searchType += "33,";
+    if ( $("#cbType34").is(':checked')) searchType += "34,";
+    if ( $("#cbType35").is(':checked')) searchType += "35,";
+    if ( $("#cbType36").is(':checked')) searchType += "36,";
+    if ( $("#cbType37").is(':checked')) searchType += "37,";
+    if ( $("#cbType38").is(':checked')) searchType += "38,";
+    if ( $("#cbType39").is(':checked')) searchType += "39,";
+    if ( $("#cbType40").is(':checked')) searchType += "40,";
+    if ( $("#cbType41").is(':checked')) searchType += "41,";
+    if ( $("#cbType42").is(':checked')) searchType += "42,";
+    if ( $("#cbType43").is(':checked')) searchType += "43,";
+    if ( $("#cbType44").is(':checked')) searchType += "44,";
+    if ( $("#cbType45").is(':checked')) searchType += "45,";
+    if ( $("#cbType47").is(':checked')) searchType += "47,";
+    if ( $("#cbType48").is(':checked')) searchType += "48,";
+    if ( $("#cbType49").is(':checked')) searchType += "49,";
+    if ( $("#cbType50").is(':checked')) searchType += "50,";
+    if ( $("#cbType51").is(':checked')) searchType += "51,";
+    if ( $("#cbType52").is(':checked')) searchType += "52,";
+    if ( $("#cbType53").is(':checked')) searchType += "53,";
     self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
     // TEXTUAL OPTION to filter checkboxes by text type
