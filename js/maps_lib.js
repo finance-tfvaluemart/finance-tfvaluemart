@@ -126,8 +126,8 @@
         select: self.locationColumn,
         where: whereClause
       },
-      styleId: 2,
-      templateId: 2
+      styleId: 1,
+      templateId: 1
     });
     self.fusionTable = self.searchrecords;
     self.searchrecords.setMap(map);
