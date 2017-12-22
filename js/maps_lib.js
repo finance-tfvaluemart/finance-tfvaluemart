@@ -250,11 +250,11 @@
     if ( $("#cbType50").is(':checked')) searchType += "50,";
     if ( $("#cbType51").is(':checked')) searchType += "51,";
     if ( $("#cbType52").is(':checked')) searchType += "52,";
-    if ( $("#cbType48").is(':checked')) searchType += "53,";
-    if ( $("#cbType49").is(':checked')) searchType += "54,";
-    if ( $("#cbType50").is(':checked')) searchType += "55,";
-    if ( $("#cbType51").is(':checked')) searchType += "56,";
-    if ( $("#cbType52").is(':checked')) searchType += "57,";
+    if ( $("#cbType53").is(':checked')) searchType += "53,";
+    if ( $("#cbType54").is(':checked')) searchType += "54,";
+    if ( $("#cbType55").is(':checked')) searchType += "55,";
+    if ( $("#cbType56").is(':checked')) searchType += "56,";
+    if ( $("#cbType57").is(':checked')) searchType += "57,";
     self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
     // TEXTUAL OPTION to filter checkboxes by text type
