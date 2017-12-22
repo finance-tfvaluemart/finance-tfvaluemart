@@ -273,6 +273,8 @@
       self.polygon1.setMap(self.map);
     }
     // use if adding another polygon layer
+    else if ($("#rbPolygon2").is(':checked')) {
+    self.polygon2.setMap(self.map);
   
   }
     //-----end of custom filters-----
