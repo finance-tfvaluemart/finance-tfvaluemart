@@ -15,7 +15,7 @@
     this.polygon1TableId = options.polygon1TableId || "",
     // To add a second polygon layer
     this.polygon2TableId = options.polygon2TableId || "",
-   
+
     // Found at https://console.developers.google.com/
     // Important! this key is for demonstration purposes. please register your own.
     this.googleApiKey = options.googleApiKey || "",
@@ -29,7 +29,7 @@
     this.locationScope = options.locationScope || "";
 
     // zoom level when map is loaded (bigger is more zoomed in)
-    this.defaultZoom = options.defaultZoom || 8;
+    this.defaultZoom = options.defaultZoom || 13;
 
     // center that your map defaults to
     this.map_centroid = new google.maps.LatLng(options.map_center[0], options.map_center[1]);
@@ -81,7 +81,7 @@
         styleId: 2,
         templateId: 2
     });
-    
+
     //reset filters
     $("#search_address").val(self.convertToPlainString($.address.parameter('address')));
     var loadRadius = self.convertToPlainString($.address.parameter('radius'));
@@ -250,11 +250,11 @@
     if ( $("#cbType50").is(':checked')) searchType += "50,";
     if ( $("#cbType51").is(':checked')) searchType += "51,";
     if ( $("#cbType52").is(':checked')) searchType += "52,";
-    if ( $("#cbType53").is(':checked')) searchType += "53,";
-    if ( $("#cbType54").is(':checked')) searchType += "54,";
-    if ( $("#cbType55").is(':checked')) searchType += "55,";
-    if ( $("#cbType56").is(':checked')) searchType += "56,";
-    if ( $("#cbType57").is(':checked')) searchType += "57,";
+    if ( $("#cbType48").is(':checked')) searchType += "53,";
+    if ( $("#cbType49").is(':checked')) searchType += "54,";
+    if ( $("#cbType50").is(':checked')) searchType += "55,";
+    if ( $("#cbType51").is(':checked')) searchType += "56,";
+    if ( $("#cbType52").is(':checked')) searchType += "57,";
     self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
     // TEXTUAL OPTION to filter checkboxes by text type
@@ -275,8 +275,7 @@
     // use if adding another polygon layer
     else if ($("#rbPolygon2").is(':checked')) {
     self.polygon2.setMap(self.map);
-   
-  
+
   }
     //-----end of custom filters-----
 
@@ -447,6 +446,8 @@
         self.addrMarker.setMap(null);
     if (self.polygon1 && self.polygon1.getMap)
         self.polygon1.setMap(null);
+    if (self.polygon2 && self.polygon2.getMap)
+        self.polygon2.setMap(null);
     if (self.searchRadiusCircle && self.searchRadiusCircle.getMap)
         self.searchRadiusCircle.setMap(null);
   };
