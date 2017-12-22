@@ -14,8 +14,7 @@
     // EDIT to add more if you have additional polygon layers
     this.polygon1TableId = options.polygon1TableId || "",
     // To add a second polygon layer
-    this.polygon2TableId = options.polygon2TableId || "",
-    
+   
     // Found at https://console.developers.google.com/
     // Important! this key is for demonstration purposes. please register your own.
     this.googleApiKey = options.googleApiKey || "",
@@ -68,14 +67,6 @@
     self.polygon1 = new google.maps.FusionTablesLayer({
       query: {
         from:   self.polygon1TableId,
-        select: "geometry"
-      },
-        styleId: 2,
-        templateId: 2
-    });
-    self.polygon2 = new google.maps.FusionTablesLayer({
-      query: {
-        from:   self.polygon2TableId,
         select: "geometry"
       },
         styleId: 2,
@@ -273,8 +264,7 @@
       self.polygon1.setMap(self.map);
     }
     // use if adding another polygon layer
-    else if ($("#rbPolygon2").is(':checked')) {
-    self.polygon2.setMap(self.map);
+   
   
   }
     //-----end of custom filters-----
@@ -446,8 +436,6 @@
         self.addrMarker.setMap(null);
     if (self.polygon1 && self.polygon1.getMap)
         self.polygon1.setMap(null);
-    if (self.polygon2 && self.polygon2.getMap)
-        self.polygon2.setMap(null);
     if (self.searchRadiusCircle && self.searchRadiusCircle.getMap)
         self.searchRadiusCircle.setMap(null);
   };
