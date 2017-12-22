@@ -74,15 +74,6 @@
         templateId: 2
     });
 
-    self.polygon2 = new google.maps.FusionTablesLayer({
-        query: {
-          from:   self.polygon2TableId,
-          select: "geometry"
-        },
-        styleId: 2,
-        templateId: 2
-    });
-
     //reset filters
     $("#search_address").val(self.convertToPlainString($.address.parameter('address')));
     var loadRadius = self.convertToPlainString($.address.parameter('radius'));
@@ -274,9 +265,8 @@
       self.polygon1.setMap(self.map);
     }
     // use if adding another polygon layer
-    else if ($("#rbPolygon2").is(':checked')) {
-      self.polygon2.setMap(self.map);
-    }
+  
+  }
     //-----end of custom filters-----
 
     self.getgeoCondition(address, function (geoCondition) {
