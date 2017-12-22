@@ -14,8 +14,7 @@
     // EDIT to add more if you have additional polygon layers
     this.polygon1TableId = options.polygon1TableId || "",
     // To add a second polygon layer
-    this.polygon2TableId = options.polygon2TableId || "",
-
+    
     // Found at https://console.developers.google.com/
     // Important! this key is for demonstration purposes. please register your own.
     this.googleApiKey = options.googleApiKey || "",
@@ -73,15 +72,7 @@
         styleId: 2,
         templateId: 2
     });
-    self.polygon2 = new google.maps.FusionTablesLayer({
-      query: {
-        from:   self.polygon2TableId,
-        select: "geometry"
-      },
-        styleId: 2,
-        templateId: 2
-    });
-
+    
     //reset filters
     $("#search_address").val(self.convertToPlainString($.address.parameter('address')));
     var loadRadius = self.convertToPlainString($.address.parameter('radius'));
