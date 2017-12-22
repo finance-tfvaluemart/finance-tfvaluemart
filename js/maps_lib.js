@@ -14,7 +14,7 @@
     // EDIT to add more if you have additional polygon layers
     this.polygon1TableId = options.polygon1TableId || "",
     // To add a second polygon layer
-    this.polygon2TableId = options.polygon1TableId || "",
+    this.polygon2TableId = options.polygon2TableId || "",
     
     // Found at https://console.developers.google.com/
     // Important! this key is for demonstration purposes. please register your own.
