@@ -255,7 +255,7 @@
     if ( $("#cbType55").is(':checked')) searchType += "55,";
     if ( $("#cbType56").is(':checked')) searchType += "56,";
     if ( $("#cbType57").is(':checked')) searchType += "57,";
-    self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
+        self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 
     // TEXTUAL OPTION to filter checkboxes by text type
     // EDIT type_column and EXACT words to match your Google Fusion Table points AND index.html
